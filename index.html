@@ -30,8 +30,10 @@
         <meta name="twitter:creator" content="@...">
 
         <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/jquery.fullpage.min.css">
         <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
@@ -58,27 +60,27 @@
 
         <nav>
             <div class="nav__line"></div>
-            <ul>
+            <ul id="menu">
                 <li>
-                    <a href="#" class="nav__item">
+                    <a href="#page1" class="nav__item" data-menuanchor="page1" id="menu1">
                         <span class="nav__number">01</span>
                         <span class="nav__value">Поиск</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav__item">
+                    <a href="#page2" class="nav__item" data-menuanchor="page2" id="menu2">
                         <span class="nav__number">02</span>
                         <span class="nav__value">Заполняй</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav__item">
+                    <a href="#" class="nav__item" data-menuanchor="#" id="menu3">
                         <span class="nav__number">03</span>
                         <span class="nav__value">Согласовывай</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav__item">
+                    <a href="#" class="nav__item" data-menuanchor="#" id="menu4">
                         <span class="nav__number">04</span>
                         <span class="nav__value">Подписывай</span>
                     </a>
@@ -104,36 +106,380 @@
             </ul>
             <div class="nav__line"></div>
         </nav>
+        <div class="section-block" id="fullpage">
 
-        <section>
-            <div class="double-block">
-                <div class="double-block__column">
-                    <div class="owl-carousel main-carousel">
-                        <div class="item">
+            <section class="vertical-scrolling" id="page1">
+                <div class="horizontal-scrolling">
+                    <div class="page-block double-block">
+                        <div class="double-block__column">
                             <div class="page-caption">
                                 Просто <span class="back--yellow">заполни</span>, <span class="back--blue">согласуй</span> и <span class="back--red">подпиши</span> любой документ с помощью getlaw!
                             </div>
+                            <form role="search" method="get" class="search-form form" action="">
+                                <label>
+                                    <span class="screen-reader-text">Поиск документов</span>
+                                    <input type="search" class="search-field" placeholder="Поиск документов" value="" name="s" title="" />
+                                </label>
+                                <button class="search-submit search-button">
+                                    <img src="img/search-icon.svg" alt="">
+                                </button>
+                            </form>
                         </div>
-                        <div class="item">
-                            <div class="page-caption">
-                                Оформляй любые сделки самостоятельно с помощью Getlaw!
+                        <div class="double-block__column block-center">
+                            <img src="img/femida.svg" alt="">
+                            <div class="decor-img triangle">
+                                <img src="img/triangle.svg" alt="">
+                            </div>
+                            <div class="decor-img romb">
+                                <img src="img/romb.svg" alt="">
+                            </div>
+                            <div class="decor-img zic">
+                                <img src="img/zic.svg" alt="">
                             </div>
                         </div>
-                        <div class="item">
-                            <h1 class="page-caption">Все документы для бизнеса — в одном месте</h1>
+                    </div>
+                </div>
+                <div class="horizontal-scrolling">
+                    <div class="page-block double-block">
+                        <div class="double-block__column">
+                            <div class="page-caption">
+                                Оформляй любые сделки самостоятельно с помощью <span class="text-color--blue">Getlaw</span>!
+                            </div>
+                            <form role="search" method="get" class="search-form form" action="">
+                                <label>
+                                    <span class="screen-reader-text">Поиск документов</span>
+                                    <input type="search" class="search-field" placeholder="Поиск документов" value="" name="s" title="" />
+                                </label>
+                                <button class="search-submit search-button">
+                                    <img src="img/search-icon.svg" alt="">
+                                </button>
+                            </form>
+                            <div class="relevant-result">
+                                <div class="relevant-result__item">
+                                    Автомобиль
+                                </div>
+                                <div class="relevant-result__item">
+                                    Жилье
+                                </div>
+                                <div class="relevant-result__item">
+                                    Прочее имущество
+                                </div>
+                                <div class="relevant-result__item">
+                                    Коммерческая недвижимость
+                                </div>
+                                <a href="#" class="button button--transparent">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="double-block__column block-center">
+                            <img src="img/femida.svg" alt="">
+                            <div class="decor-img triangle">
+                                <img src="img/triangle.svg" alt="">
+                            </div>
+                            <div class="decor-img romb">
+                                <img src="img/romb.svg" alt="">
+                            </div>
+                            <div class="decor-img zic">
+                                <img src="img/zic.svg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="search-block">
-
+                </div>
+                <div class="horizontal-scrolling">
+                    <div class="page-block double-block">
+                        <div class="double-block__column">
+                            <div class="page-caption">
+                                Все документы для бизнеса — в одном месте
+                            </div>
+                            <form role="search" method="get" class="search-form form" action="">
+                                <label>
+                                    <span class="screen-reader-text">Поиск документов</span>
+                                    <input type="search" class="search-field" placeholder="Поиск документов" value="" name="s" title="" />
+                                </label>
+                                <button class="search-submit search-button">
+                                    <img src="img/search-icon.svg" alt="">
+                                </button>
+                            </form>
+                            <div class="relevant-result">
+                                <div class="relevant-result__item template-icon">
+                                    Открытие бизнеса
+                                </div>
+                                <div class="relevant-result__item template-icon">
+                                    Закрытие бизнеса
+                                </div>
+                                <div class="relevant-result__item template-icon">
+                                    Займы
+                                </div>
+                                <div class="relevant-result__item template-icon">
+                                    Поставки
+                                </div>
+                                <a href="#" class="button button--transparent">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="double-block__column block-center">
+                            <img src="img/femida.svg" alt="">
+                            <div class="decor-img triangle">
+                                <img src="img/triangle.svg" alt="">
+                            </div>
+                            <div class="decor-img romb">
+                                <img src="img/romb.svg" alt="">
+                            </div>
+                            <div class="decor-img zic">
+                                <img src="img/zic.svg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="double-block__column">
-                    <img src="img/femida.svg" alt="">
+
+            </section>
+
+            <section class="vertical-scrolling" id="page2">
+                <div class="horizontal-scrolling">
+                    <div class="page-block">
+                        <div class="page-caption">
+                            <span class="back--yellow">Заполняй</span> любые шаблоны документов из библиотеки getlaw, или <span class="back--blue">создай</span> собственные за пару минут                        </div>
+                        <div class="content-block">
+                            <div class="content-block__column--w50">
+                                <div class="info-block">
+                                    <h4>Большая база шаблонов</h4>
+                                    <p>
+                                        <a href="#">Более 1000 шаблонов документов</a> на все случаи жизни у тебя в распоряжении
+                                    </p>
+                                </div>
+                                <div class="info-block">
+                                    <h4>Интуитивный интерфейс</h4>
+                                    <p>
+                                        Заполняй существующие документы и составляй новые шаблоны в
+                                        удобном и понятном интерфейсе
+                                    </p>
+                                </div>
+                                <div class="info-block">
+                                    <h4>Экономия времени</h4>
+                                    <p>
+                                        Экономь до 90% рабочего времени
+                                        и минимизируй риски ошибок с getlaw
+                                    </p>
+                                </div>
+                                <div class="info-block">
+                                    <h4>Собственная библиотека</h4>
+                                    <p>
+                                        Держи сохраненные документы под
+                                        рукой в личной библиотеке
+                                    </p>
+                                </div>
+                                <div class="button-box">
+                                    <a href="#" class="button content-button content-button--yellow">Заполнить документ</a>
+                                    <a href="#" class="button content-button">Создать шаблон</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="horizontal-scrolling">
+                    <div class="page-block">
+                        <div class="page-caption">
+                            <span class="back--yellow">Заполняй</span> любые шаблоны документов из библиотеки getlaw, или <span class="back--blue">создай</span> собственные за пару минут
+                        </div>
+                        <div class="content-block">
+                            <div class="tabs">
+                                <ul class="tabs__caption">
+                                    <li class="active">Все для бизнеса</li>
+                                    <li>Недвижимость</li>
+                                    <li>Сдать или снять</li>
+                                    <li>Выполнение работ</li>
+                                    <li>Оказание услуг</li>
+                                    <li>Обменить или подраить</li>
+                                    <li>Посредничество</li>
+                                    <li>Интеллектуальная собственность</li>
+                                    <li>Трудовые отношения</li>
+                                    <li>Кредиты и займы</li>
+                                </ul>
+                                <div class="tabs__content active">
+                                    <h2>Все для бизнеса</h2>
+                                    <p>
+                                        Используйте GetLaw, чтобы экономить время и снижать риски,
+                                        создавая юридически грамотные документы за считанные минуты.
+                                        Благодаря интерактивным шаблонам
+                                        это так же просто, как
+                                        заполнить анкету или
+                                        пройти опрос
+                                    </p>
+                                    <a href="#" class="button content-button">Подробнее</a>
+                                    <div class="relevant-result">
+                                        <p class="no-indent">Популярные шаблоны по теме:</p>
+                                        <div class="relevant-result__item mb-min template-icon">
+                                            Автомобиль
+                                        </div>
+                                        <div class="relevant-result__item mb-min template-icon">
+                                            Жилье
+                                        </div>
+                                        <div class="relevant-result__item mb-min template-icon">
+                                            Прочее имущество
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <div class="tabs__content">
+                                    Содержимое второго блока
+                                </div>
+                            </div>
+                            <div class="content-image">
+                                <img src="img/content-image1.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+            </section>
+
+            <section class="vertical-scrolling" id="page3">
+                <div class="page-block">
+                    <div class="page-caption">
+                        <span class="back--yellow">Согласовывай</span> и <span class="back--blue">утверждай</span> любой документ с контрагентом без длинных переписок и звонков
+                    </div>
+                    <div class="content-block content-block--center">
+                        <div class="steps">
+                            <div class="steps__item">
+                                <div class="img-decor after">
+                                    <img src="img/content-image2.svg" alt="">
+                                </div>
+
+                                <h4>1. Загружайте</h4>
+                                <p>
+                                    Направь контрагенту заполненный в getlaw документ или загрузи собственный файл в формате Word
+                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="img-decor before">
+                                    <img src="img/content-image3.svg" alt="">
+                                </div>
+                                <h4>2. Редактируйте</h4>
+                                <p>
+                                    Вносите, принимайте и отклоняйте предложения по изменению документа в удобном режиме правок                                </p>
+                            </div>
+                            <div class="steps__item">
+                                <div class="img-decor">
+                                    <img src="img/content-image4.svg" alt="">
+                                </div>
+                                <h4>3. Утверждайте</h4>
+                                <p>
+                                    Утвердите финальную версию документа и переходите к подписанию
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#" class="button content-button">Попробовать</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="vertical-scrolling" id="page4">
+                <div class="page-block">
+                    <div class="page-caption">
+                        <span class="back--yellow">Подписывай</span> документы онлайн — без<br> бумаги, курьеров и печатей. Ну и в два клика
+                    </div>
+                        <div class="content-block">
+                        <div class="content-block__column--w60">
+                            <div class="info-block">
+                                <p class="p-arrow">
+                                    <a href="#">Заполни</a> и <a href="#">согласуй</a> документы через getlaw или загрузи уже готовые к подписанию файлы в формате PDF
+                                </p>
+                            </div>
+                            <div class="info-block">
+                                <p class="p-arrow">
+                                    Верифицируйся и подпиши документ с помощью электронной подписи
+                                </p>
+                            </div>
+                            <div class="info-block">
+                                <p class="p-arrow">
+                                    Отправь контрагенту ссылку на документ и дождись, пока он его подпишет
+                                </p>
+                            </div>
+                            <div class="info-block">
+                                <p class="p-arrow">
+                                    Готово - документ подписан и имеет <a href="#">юридическую силу</a>!
+                                </p>
+                            </div>
+                            <div class="info-block">
+                                <p class="p-arrow">
+                                    Храни подписанные документы в личной библиотеке - в <a href="#">безопасности</a> и всегда под рукой
+                                </p>
+                            </div>
+                            <div class="button-box mt-60">
+                                <a href="#" class="button content-button">Подписать документ</a>
+                                <a href="#" class="button content-button content-button--grey">Легальность</a>
+                                <a href="#" class="button content-button content-button--grey">Как это работает?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="vertical-scrolling" id="page5">
+                <div class="page-block">
+                    <div class="page-caption">
+                        <span class="back--yellow">Заполняй</span> любые шаблоны документов из библиотеки getlaw, или <span class="back--blue">создай</span> собственные за пару минут
+                    </div>
+                    <div class="content-block">
+                        <div class="tabs">
+                            <ul class="tabs__caption">
+                                <li class="active">1-я вкладка</li>
+                                <li>2-я вкладка</li>
+                            </ul>
+                            <div class="tabs__content active">
+                                Содержимое первого блока
+                            </div>
+                            <div class="tabs__content">
+                                Содержимое второго блока
+                            </div>
+                        </div><!-- .tabs -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="vertical-scrolling" id="page6">
+                <div class="page-block">
+                    <div class="page-caption">
+                        <span class="back--yellow">Заполняй</span> любые шаблоны документов из библиотеки getlaw, или <span class="back--blue">создай</span> собственные за пару минут
+                    </div>
+                    <div class="content-block">
+                        <div class="tabs">
+                            <ul class="tabs__caption">
+                                <li class="active">1-я вкладка</li>
+                                <li>2-я вкладка</li>
+                            </ul>
+                            <div class="tabs__content active">
+                                Содержимое первого блока
+                            </div>
+                            <div class="tabs__content">
+                                Содержимое второго блока
+                            </div>
+                        </div><!-- .tabs -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="vertical-scrolling" id="page7">
+                <div class="page-block">
+                    <div class="page-caption">
+                        <span class="back--yellow">Заполняй</span> любые шаблоны документов из библиотеки getlaw, или <span class="back--blue">создай</span> собственные за пару минут
+                    </div>
+                    <div class="content-block">
+                        <div class="tabs">
+                            <ul class="tabs__caption">
+                                <li class="active">1-я вкладка</li>
+                                <li>2-я вкладка</li>
+                            </ul>
+                            <div class="tabs__content active">
+                                Содержимое первого блока
+                            </div>
+                            <div class="tabs__content">
+                                Содержимое второго блока
+                            </div>
+                        </div><!-- .tabs -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
 
         <footer class="footer">
             <div class="soc-box">
@@ -194,8 +540,11 @@
 
 
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/wow.min.js"></script>
         <script type="text/javascript" src="js/owl.carousel.min.js"></script>
         <script type="text/javascript" src="js/scrollify.js"></script>
+        <script type="text/javascript" src="js/jquery.fullpage.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 
