@@ -29,7 +29,7 @@ $(document).ready(function () {
         slidesNavigation: true,
         slidesNavPosition: 'top',
         controlArrows: false,
-        anchors: ['section1', 'section2', 'section3'],
+        anchors: ['section1', 'section2', 'section3','section4', 'section5', 'section6', 'section6'],
         menu: '#menu',
 
         afterRender: function(){
@@ -65,7 +65,7 @@ $(document).ready(function () {
                     $.fn.fullpage.moveTo('section' + currentSection, currentSlide + 1);
                     currentSlide++;
                 } else {
-                    if (currentSection < 2) {
+                    if (currentSection < 7) {
                         currentSection++;
                     }
                     $.fn.fullpage.moveTo('section' + (currentSection), 0);
@@ -95,12 +95,65 @@ $(document).ready(function () {
         currentSection = 4;
     });
 
+    $('#menu5').click(function(){
+        currentSlide = 0;
+        currentSection = 5;
+    });
+
+    $('#menu6').click(function(){
+        currentSlide = 0;
+        currentSection = 6;
+    });
+
+    $('#menu7').click(function(){
+        currentSlide = 0;
+        currentSection = 7;
+    });
+
     //tabs
 
     $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
         $(this).addClass('active').siblings().removeClass('active')
             .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
     })
+
+
+    //input range
+    var _R = document.querySelector('#rangeInput[type=range]');
+
+    document.documentElement.classList.add('js');
+
+    _R.addEventListener('input', function (e) {
+        _R.style.setProperty('--val', +_R.value);
+    }, false);
+
+    //input range2
+    var _R2 = document.querySelector('#rangeInput2[type=range]');
+
+    document.documentElement.classList.add('js2');
+
+    _R2.addEventListener('input', function (e) {
+        _R2.style.setProperty('--val2', +_R2.value);
+    }, false);
+
+    //input range3
+    var _R3 = document.querySelector('#rangeInput3[type=range]');
+
+    document.documentElement.classList.add('js3');
+
+    _R3.addEventListener('input', function (e) {
+        _R3.style.setProperty('--val3', +_R3.value);
+    }, false);
+
+    //input range4
+    var _R4 = document.querySelector('#rangeInput4[type=range]');
+
+    document.documentElement.classList.add('js4');
+
+    _R4.addEventListener('input', function (e) {
+        _R4.style.setProperty('--val4', +_R4.value);
+    }, false);
+
 
     function getSection() {
         return parseInt($('.fp-section.active').first().attr('id').replace(/page/g,''));
@@ -110,6 +163,7 @@ $(document).ready(function () {
         return $('.fp-section.active').find('.fp-slide.active').index();
     }
 });
+
 
 
 
