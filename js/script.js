@@ -117,6 +117,18 @@ $(document).ready(function () {
             .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
     })
 
+    // Accordion
+    if( $(".toggle .toggle-title").hasClass('active') ){
+        $(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
+    }
+    $(".toggle .toggle-title").click(function(){
+        if( $(this).hasClass('active') ){
+            $(this).removeClass("active").closest('.toggle').removeClass('show').find('.toggle-inner').slideUp(500);
+        }
+        else{	$(this).addClass("active").closest('.toggle').addClass('show').find('.toggle-inner').slideDown(500);
+        }
+    });
+
 
     //input range
     var _R = document.querySelector('#rangeInput[type=range]');
