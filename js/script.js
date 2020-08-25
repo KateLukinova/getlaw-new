@@ -29,7 +29,7 @@ $(document).ready(function () {
         slidesNavigation: true,
         slidesNavPosition: 'top',
         controlArrows: false,
-        anchors: ['section1', 'section2', 'section3','section4', 'section5', 'section6', 'section6'],
+        anchors: ['section1', 'section2', 'section3','section4', 'section5', 'section6', 'section7'],
         menu: '#menu',
 
         afterRender: function(){
