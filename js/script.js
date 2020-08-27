@@ -70,35 +70,31 @@ $(document).ready(function () {
         slidesToScroll: 1,
         speed: 400,
         arrows: false,
-        asNavFor: '.slider-nav'
+        asNavFor: '.pages-nav'
     });
     $('.pages-nav').slick({
         asNavFor: '.pages-carousel',
         slidesToShow: 3,
         slidesToScroll: 1,
-        centerMode: true,
         focusOnSelect: true,
-        loop: true,
         arrows: false,
-        responsive: [
-            {
-                breakpoint: 540,
-                settings: {
-                    slidesToShow: 3,
-                    centerMode: true,
-                    infinite: true
-                }
-            }
-        ]
+        vertical: true
     });
-    $(".reviews-button-prev").click(function () {
-        $('.slider-reviews').slick('slickPrev');
-        $('.slider-nav').slick('slickPrev');
+    $(".page-button-prev").click(function () {
+        $('.pages-carousel').slick('slickPrev');
+        $('.pages-nav').slick('slickPrev');
     });
-    $(".reviews-button-next").click(function () {
-        $('.slider-reviews').slick('slickNext');
-        $('.slider-nav').slick('slickNext');
+    $(".page-button-next").click(function () {
+        $('.pages-carousel').slick('slickNext');
+        $('.pages-nav').slick('slickNext');
     });
+
+    //show search
+
+    $( ".img-search-button" ).click(function() {
+        $(this).siblings('.search-result').addClass('show').parent().css('height', '600px');
+    });
+
 
 
     var currentSlide = 0;
