@@ -95,6 +95,26 @@ $(document).ready(function () {
         $(this).siblings('.search-result').addClass('show').parent().css('height', '600px');
     });
 
+    //show modal
+
+    $( ".login-button" ).click(function() {
+        $('.modal').addClass('show');
+    });
+
+    //hide modal
+
+    $( ".modal-close" ).click(function() {
+        $('.modal').removeClass('show');
+    });
+
+    //show
+
+    $( "#recovery-button" ).click(function() {
+        $('.enter-wrap').css('display', 'none');
+        $('.recovery-password').css('display', 'block');
+    });
+
+
 
 
     var currentSlide = 0;

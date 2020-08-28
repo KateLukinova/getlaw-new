@@ -983,6 +983,57 @@
         </footer>
     </div>
 
+    <div class="modal">
+        <a href="#" class="modal-close"><img src="img/modal-close.svg" alt=""></a>
+        <div class="form-wrap enter-wrap">
+            <div class="form-tabs enter-reg-tabs">
+                <div class="enter-reg-content">
+                    <input value="enter-tab" type="radio" name="enter-reg" id="enter-tab" checked="checked"/>
+                    <label for="enter-tab" class="pos--center">
+                        Вход
+                    </label>
+                    <input value="reg-tab" type="radio" name="enter-reg" id="reg-tab"/>
+                    <label for="reg-tab" class="pos">
+                        Регистрация
+                    </label>
+                    <div id="enter-content">
+                        <h2>Вход в личный кабинет</h2>
+                        <form id="enter-form" action="">
+                            <input placeholder="Email" type="email"/>
+                            <input placeholder="Пароль" type="password"/>
+                            <a href="#" class="enter-hint" id="recovery-button">Восстановить пароль</a>
+                            <button class="button content-button content-button--yellow"  type="submit">Войти</button>
+                        </form>
+                    </div>
+                    <div id="reg-content">
+                        <h2>Регистрация</h2>
+                        <form id="reg-form" action="">
+                            <input placeholder="Email" type="email"/>
+                            <button class="button content-button content-button--yellow" type="submit">Зарегистрироваться</button>
+                            <div class="reg-hint">Предоставляя ваши контактные данные, вы соглашаетесь на обработку пресональной информации в соответствии с
+                                <a href="#">пользовательским соглашением</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recovery-password">
+            <h2>Восстановление пароля</h2>
+            <form id="recovery-password__form" action="">
+                <input placeholder="Укажите ваш Email" type="email"/>
+                <div class="capcha">
+                    <img src="img/capcha.svg" alt="">
+                </div>
+                <button class="button content-button content-button--yellow"  type="submit">Восстановить пароль</button>
+            </form>
+        </div>
+        <div class="modal-ok">
+            <h2>Ссылка для сброса пароля
+                выслана на почту</h2>
+            <button class="button content-button content-button--yellow"  type="submit">Закрыть</button>
+        </div>
+    </div>
+
 
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/aos.js"></script>
