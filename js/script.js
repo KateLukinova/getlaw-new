@@ -107,12 +107,30 @@ $(document).ready(function () {
         $('.modal').removeClass('show');
     });
 
-    //show
+    //show recovery button
 
     $( "#recovery-button" ).click(function() {
         $('.enter-wrap').css('display', 'none');
         $('.recovery-password').css('display', 'block');
     });
+
+    //show menu mobile
+
+    $( ".menu-icon" ).click(function() {
+        $('nav').addClass('show');
+    });
+
+    //hide menu mobile
+
+    $( ".nav__item" ).click(function() {
+        $('nav').removeClass('show');
+    });
+
+    $( ".close-menu" ).click(function() {
+        $('nav').removeClass('show');
+    });
+
+
 
 
 
