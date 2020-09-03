@@ -130,9 +130,12 @@ $(document).ready(function () {
         $('nav').removeClass('show');
     });
 
+    //show sidebar mobile
 
-
-
+    $( ".sidebar-button" ).click(function() {
+        $(this).toggleClass('active')
+        $('.them-sidebar').toggleClass('show');
+    });
 
 
     var currentSlide = 0;
