@@ -183,32 +183,7 @@ $(document).ready(function () {
 
     var currentSlide = 0;
     var currentSection = 0;
-    $('#fullpage').fullpage({
-        sectionSelector: '.vertical-scrolling',
-        slideSelector: '.horizontal-scrolling',
-        navigation: true,
-        slidesNavigation: true,
-        slidesNavPosition: 'top',
-        controlArrows: false,
-        anchors: ['page1', 'page2', 'page3','page4', 'page5', 'page6', 'page7'],
-        menu: '#menu',
-
-        afterRender: function() {
-            // currentSection = getSection();
-            // currentSlide = getSlide();
-            getSectionAndSlide();
-            setActiveMenu();
-        },
-
-        afterSlideLoad: function () {
-            console.log('asdf')
-            // document.addEventListener("wheel", wheelHandler);
-            getSectionAndSlide();
-        }
-
-        // afterLoad: function
-
-    });
+    $('#fullpage').fullpage(fullPageSettings());
 
     // console.log('section = ' + currentSection)
     // console.log('slide = ' + currentSlide)
@@ -276,7 +251,13 @@ $(document).ready(function () {
                         currentSlide = $("section[data-anchor='page" + currentSection + "']").find('.horizontal-scrolling').length - 1;
                         // $("#menu" + currentSection).trigger('click');
                         $.fn.fullpage.setScrollingSpeed(0);
+                        // $.fn.fullpage.destroy('all');
+                        // $('#fullpage').fullpage(fullPageSettings());
+                        // $.fn.fullpage.setAutoScrolling(true);
+                        // $("html, body").animate({scrollTop: 500});
                         $.fn.fullpage.moveTo('page' + (currentSection), currentSlide);
+                        // $.fn.fullpage.setAutoScrolling(false);
+
                         $.fn.fullpage.setScrollingSpeed(770);
                     }
                 }
@@ -292,21 +273,62 @@ $(document).ready(function () {
                     // debugger
                     // var sadf = 'section' + currentSection;
                     $.fn.fullpage.setScrollingSpeed(0);
+                    // $.fn.fullpage.destroy('all');
+                    // $.fn.fullpage.setAutoScrolling(true);
+                    // $("html, body").animate({scrollTop: 500});
+
+                    // $('#fullpage').fullpage(fullPageSettings());
                     $.fn.fullpage.moveTo('page' + (currentSection));
+                    // $.fn.fullpage.setAutoScrolling(false);
+
                     $.fn.fullpage.setScrollingSpeed(770);
                     // $("#menu" + currentSection).trigger('click');
                     currentSlide = 0;
                 }
             }
             setActiveMenu();
+            // $.fn.fullpage.setAutoScrolling(false);
         }
     }
 
     function nullWheelHandler(e) {
         e.preventDefault();
     }
-});
 
+    function fullPageSettings() {
+        return {
+            sectionSelector: '.vertical-scrolling',
+            slideSelector: '.horizontal-scrolling',
+            navigation: true,
+            slidesNavigation: true,
+            slidesNavPosition: 'top',
+            controlArrows: false,
+            anchors: ['page1', 'page2', 'page3','page4', 'page5', 'page6', 'page7'],
+            menu: '#menu',
+
+            afterRender: function() {
+                // currentSection = getSection();
+                // currentSlide = getSlide();
+                getSectionAndSlide();
+                setActiveMenu();
+            },
+
+            afterSlideLoad: function () {
+                console.log('asdf')
+                // document.addEventListener("wheel", wheelHandler);
+                getSectionAndSlide();
+            }
+
+            // afterLoad: function
+
+        };
+    }
+
+    AOS.init({
+        duration: 1000,
+        disable: 'mobile'
+    })
+});
 
 
 
